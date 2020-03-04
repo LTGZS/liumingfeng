@@ -11,13 +11,16 @@
 			padding: 0;
 			font-weight: bold;
 		}
+		body{
+			background-color: gainsboro;
+		}
 		a{
 			text-decoration:none;
 		}
 		.top{
 			width: 100vw;
 			height: 80px;
-			color:red;
+			color:black;
 		}
 		.zuo{
 			margin: 20px 100px 20px 100px;
@@ -34,20 +37,24 @@
 			height: 60px;
 			border-top: solid 2px;
 			border-bottom: solid 2px;
-			color:red;
+			color:black;
+			
 		}
 		.nav ul{
 			width: 100vw;
 			height: 60px;
 			list-style: none;
-			
 		}
 		.nav ul li{
 			margin-left: 100px;
 			float: left;
-			width: 100px;
+			width: 70px;
 			line-height: 60px;
 			text-align: center;
+		}
+		.nav ul li a{
+			font-weight: bold;
+			color:black;
 		}
 		.nr{
 			width: 100vw;
@@ -56,29 +63,42 @@
 			border-bottom: solid 2px;
 			line-height: 200px;
 			color:red;
+			background-image: url(http://img5.imgtn.bdimg.com/it/u=218901621,2867035904&fm=26&gp=0.jpg);
+			background-position:center;
+			background-repeat: no-repeat;
+			background-size:cover;
+			margin-bottom: 50px;
 		}
 		.nrxq{
 			display: block;
 			width: 100vw;
 			height: 800px;
 			list-style: none;
-			color:red;
+			display: flex;
+			flex-wrap:wrap ;
+			justify-content:space-around;
 		}
 		.nrxq li{
-			width: 49.9vw;
-			height: 400px;
-			float: left;
+			width: 45vw;
+			height: 300px;
+			border-radius: 50px;
 			text-align: center;
 			/* border-bottom: solid 2px;
 			border-right: solid 2px; */
-			line-height: 400px;
+			line-height: 650px;
+			border: solid 5px white;
+			background-position:center;
+			background-repeat: no-repeat;
+			background-size:cover;
+			color: black;
 		}
 		.dl{
 			width: 100vw;
-			height: 60px;
+			height: 80px;
 			text-align: center;
-			line-height: 60px;
-			color:red;
+			line-height: 80px;
+			color:white;
+			background-color: #000000;
 		}
 	</style>
 	<body>
@@ -90,7 +110,7 @@
 		</div>
 		<div class="nav">
 			<ul>
-				<li><a href="index.html" style="color: aquamarine;">首页</a></li>
+				<li><a href="index.html" style="color:white;">首页</a></li>
 				<li><a href="dier.html">科普传授</a></li>
 				<li><a href="disan.html">医学知识</a></li>
 			</ul>
@@ -99,10 +119,10 @@
 			疫情报道（优先显示我国最新疫情状况）
 		</div>
 		<ul class="nrxq">
-			<li style="border-bottom: solid 2px;border-right: solid 2px;">疫情纪录片（疫情记录让人民认识到疫情的可怕）</li>
-			<li style="border-bottom: solid 2px;">医护报道（介绍医生/护士的辛勤劳动）</li>
-			<li style="border-bottom: solid 2px;border-right: solid 2px;">疫情科普（科普知识增加人民思想觉悟）</li>
-			<li style="border-bottom: solid 2px;">疫情数据图（更直观了解疫情数值变化）</li>
+			<li style="background-image: url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2290598944,2858249945&fm=11&gp=0.jpg)">疫情纪录片（疫情记录让人民认识到疫情的可怕）</li>
+			<li style="background-image: url(https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2693653745,2237670452&fm=26&gp=0.jpg)">医护报道（介绍医生/护士的辛勤劳动）</li>
+			<li style="background-image: url(https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3632649876,1275093288&fm=11&gp=0.jpg)">疫情科普（科普知识增加人民思想觉悟）</li>
+			<li style="background-image: url(https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3908483291,2758494379&fm=26&gp=0.jpg)">疫情数据图（更直观了解疫情数值变化）</li>
 		</ul>
 		<div class="dl">
 			欢迎加入疫情宣传
