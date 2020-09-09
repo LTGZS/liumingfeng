@@ -1,131 +1,303 @@
-<!DOCTYPE html>
+
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<title>刘明凤</title>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">	
+<title>刘明凤个人网站</title>
+<link href="https://ltgzs.github.io/nu/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="https://ltgzs.github.io/nu/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="https://ltgzs.github.io/nu/css/demo.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://ltgzs.github.io/nu/css/sticky-navigation.css" />
+
+<script src="https://ltgzs.github.io/nu/js/jquery.min.js"></script>
+<script src="https://ltgzs.github.io/nu/js/responsiveslides.min.js"></script>
+
+		<script type="text/javascript" src="https://ltgzs.github.io/nu/js/move-top.js"></script>
+		<script type="text/javascript" src="https://ltgzs.github.io/nu/js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+
+<script>
+$(function() {
+
+	
+	var sticky_navigation_offset_top = $('#sticky_navigation').offset().top;
+	
+	
+	var sticky_navigation = function(){
+		var scroll_top = $(window).scrollTop(); 
 		
-	</head>
-	<style type="text/css">
-		*{
-			margin: 0;
-			padding: 0;
-			font-weight: bold;
-		}
-		body{
-			background-color: gainsboro;
-		}
-		a{
-			text-decoration:none;
-		}
-		.top{
-			width: 100vw;
-			height: 80px;
-			color:black;
-		}
-		.zuo{
-			margin: 20px 100px 20px 100px;
-			float: left;
-		}
-		.you{
-			margin: 20px 100px 20px 100px;
-			float: right;
-		}
 		
-		
-		.nav{
-			width: 100vw;
-			height: 60px;
-			border-top: solid 2px;
-			border-bottom: solid 2px;
-			color:black;
-			
-		}
-		.nav ul{
-			width: 100vw;
-			height: 60px;
-			list-style: none;
-		}
-		.nav ul li{
-			margin-left: 100px;
-			float: left;
-			width: 70px;
-			line-height: 60px;
-			text-align: center;
-		}
-		.nav ul li a{
-			font-weight: bold;
-			color:black;
-		}
-		.nr{
-			width: 100vw;
-			height: 200px;
-			text-align: center;
-			border-bottom: solid 2px;
-			line-height: 200px;
-			color:red;
-			background-image: url(http://img5.imgtn.bdimg.com/it/u=218901621,2867035904&fm=26&gp=0.jpg);
-			background-position:center;
-			background-repeat: no-repeat;
-			background-size:cover;
-			margin-bottom: 50px;
-		}
-		.nrxq{
-			display: block;
-			width: 100vw;
-			height: 800px;
-			list-style: none;
-			display: flex;
-			flex-wrap:wrap ;
-			justify-content:space-around;
-		}
-		.nrxq li{
-			width: 45vw;
-			height: 300px;
-			border-radius: 50px;
-			text-align: center;
-			/* border-bottom: solid 2px;
-			border-right: solid 2px; */
-			line-height: 650px;
-			border: solid 5px white;
-			background-position:center;
-			background-repeat: no-repeat;
-			background-size:cover;
-			color: black;
-		}
-		.dl{
-			width: 100vw;
-			height: 80px;
-			text-align: center;
-			line-height: 80px;
-			color:white;
-			background-color: #000000;
-		}
-	</style>
-	<body>
-		<div class="top">
-			<div class="zuo">
-				logo/设计师：刘明凤
+		if (scroll_top > sticky_navigation_offset_top) { 
+			$('#sticky_navigation').css({ 'position': 'fixed', 'top':0, 'left':0 });
+		} else {
+			$('#sticky_navigation').css({ 'position': 'relative' }); 
+		}   
+	};
+	
+	
+	sticky_navigation();
+	
+	
+	$(window).scroll(function() {
+		 sticky_navigation();
+	});
+	
+	
+	$('a[href="#"]').click(function(event){ 
+		event.preventDefault(); 
+	});
+	
+});
+</script>
+
+
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300italic,400,700,900,300italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,200,900,800,700,600,500,300,100' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<div id="demo_top_wrapper">
+	<div id="demo_top">
+			<div class="header" id="home">
+				<div class="logo">
+				<a href="#"><img src="https://pic.downk.cc/item/5f586b53160a154a67deb204.png" alt=""/></a>
+				</div>
 			</div>
-			
-		</div>
-		<div class="nav">
-			<ul>
-				<li><a href="index.html" style="color:white;">首页</a></li>
-				<li><a href="dier.html">科普传授</a></li>
-				<li><a href="disan.html">医学知识</a></li>
-			</ul>
-		</div>
-		<div class="nr">
-			疫情报道（优先显示我国最新疫情状况）
-		</div>
-		<ul class="nrxq">
-			<li style="background-image: url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2290598944,2858249945&fm=11&gp=0.jpg)">疫情纪录片（疫情记录让人民认识到疫情的可怕）</li>
-			<li style="background-image: url(https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2693653745,2237670452&fm=26&gp=0.jpg)">医护报道（介绍医生/护士的辛勤劳动）</li>
-			<li style="background-image: url(https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3632649876,1275093288&fm=11&gp=0.jpg)">疫情科普（科普知识增加人民思想觉悟）</li>
-			<li style="background-image: url(https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3908483291,2758494379&fm=26&gp=0.jpg)">疫情数据图（更直观了解疫情数值变化）</li>
-		</ul>
-		<div class="dl">
-			欢迎加入疫情宣传
-		</div>
-	</body>
+		
+	 </div>
+	 <div id="sticky_navigation_wrapper">
+		 <div id="sticky_navigation">
+			  <div class="top-menu">
+				 <div class="container">
+						<a href="#home"><h4>个人介绍</h4></a>
+						<span class="menu"> </span>
+						<ul>
+						<li><a class="scroll" href="#about">关于</a></li>
+						<li><a class="scroll" href="#blog">作品</a></li>
+						<li><a class="scroll" href="#clients">经验</a></li>
+						<li><a class="scroll" href="#contact">留言</a></li>
+						<a href="#"><span class="img1"> </span></a>
+						<a href="#"><span class="img2"> </span></a>
+						<a href="#"><span class="img3"> </span></a>				 
+						<div class="clearfix"></div>
+						</ul>
+					 <div class="clearfix"></div>
+				 </div>
+			  </div>
+		 </div>
+	 </div>
+</div>
+
+<section id="main">
+<div class="about" id="about">
+	 <h3>欢迎来到我的世界</h3>
+	 <b></b>
+	 <div class="container">
+		 <div class="about-grids">
+			 <div class="col-md-6 about-info">		
+				 <h4>我的姓名：刘明凤</h4>
+				  <label></label>
+				 <p><h4>自我介绍：</h4>本人有积极向上的生活态度，对工作责任心强、勤恳踏实，掌握系统的美术专业理论知识和排版编辑等专业知识，拥有一定的创新思维能力。有较强的沟通、组织协调能力，有一定的艺术细胞和创意，注重团队合作精神和集体观念，能承受较强的工作压力。善于学习新的事物，有很强的责任心，上进心。</p>
+			 </div> 
+			 <div class="col-md-6 about-skill">
+				 <h4>技能</h4>
+				  <label></label>
+				  <p><i>世界上一成不变的东西，只有“任何事物都是在不断变化的”这条真理。 —— 斯里兰卡</i></p>
+					<div class="skill-grid1">
+						 <div class="skill-bar">
+						 <div class="info"><p>网页设计</p><i>70%</i></div>						 
+						 </div>
+						 <div class="icon"><img src="./images/skil.png"></div>
+						 <div class="clearfix"></div>
+					 </div>
+					 <div class="clearfix"></div>
+					 <div class="skill-grid2">
+						 <div class="skill-bar2">
+						 <div class="info2"><p>平面设计</p><i>90%</i></div>
+						 <div class="clearfix"></div>
+						 </div>
+						 <div class="icon"><img src="./images/skil.png"></div>
+						 <div class="clearfix"></div>
+					 </div>
+					 <div class="clearfix"></div>
+					 <div class="skill-grid3">
+						 <div class="skill-bar3">
+						 <div class="info3"><p>HTML+CSS</p><i>40%</i></div>
+						 <div class="clearfix"></div>
+						 </div>
+						 <div class="icon"><img src="./images/skil.png"></div>
+						 <div class="clearfix"></div>
+					 </div>
+			 </div>
+			 <div class="clearfix"></div>
+		 </div>			 
+	 </div>
+	  <a></a>
+</div>	
+
+<div class="blog" id="blog">
+	 <h3>作品</h3>
+	 <small></small>
+	 <p><i>将人生投于赌博的赌徒，当他们胆敢妄为的时候，对自己的力量有充分的自信，并且认为大胆的冒险是唯一的形式。 —— 茨威格</i></p>
+	 <div class="container">	
+		 <div class="blog-top" id="top-sec">
+			 <div class="blog-img">
+				<img src="https://pic.downk.cc/item/5f586b9a160a154a67dec138.jpg" alt="" class="img-responsive" />
+			 </div>
+			 <div class="img-desc">
+				 <h4>设计师:某某某</h4>
+				 <span></span>
+				 <p>说真话不应当是艰难的事情。我所谓真话不是指真理，也不是指正确的话。自己想什麽就讲什麽；自己怎麽想就怎麽说这就是说真话。 —— 巴金</p>
+				 <span></span>
+				 <div class="icons">
+						<a href="#"><span class="img1"> </span></a>
+						<a href="#"><span class="img2"> </span></a>
+						<a href="#"><span class="img3"> </span></a>
+				   </div>
+					<a class="date" href="#">九月</a>
+					<div class="caption">
+						<a href="#"><img src="./images/link.png" alt=""/></a>
+					</div>
+					<div class="dmnd"></div>				
+			 </div>
+		 </div>
+		 <div class="blog-top" id="top-sec">
+			 <div class="blog-img">
+				<img src="https://pic.downk.cc/item/5f586b9a160a154a67dec13a.jpg" alt="" class="img-responsive" />
+			 </div>
+			 <div class="img-desc" >
+				 <h4>设计师:某某某</h4>
+				 <span></span>
+				 <p>希望你们年青的一代，也能象蜡烛为人照明那样，有一分热，发一分光，忠诚而踏实地为人类伟大的事业贡献自己的力量。 —— 法拉第</p>
+					<span></span>
+					<div class="icons">
+						<a href="#"><span class="img1"> </span></a>
+						<a href="#"><span class="img2"> </span></a>
+						<a href="#"><span class="img3"> </span></a>
+				    </div>
+					<a class="date" href="#">九月</a>
+					<div class="caption">
+						<a href="#"><img src="./images/link.png" alt=""/></a>
+					</div>
+					<div class="dmnd"></div>				
+			 </div>
+		 </div>
+		 <div class="clearfix"></div>
+		 
+		 <div class="blog-top" id="bottom-sec">		 
+			 <div class="img-desc blog-sec" >
+				<h4>设计师:某某某</h4>
+				<span></span>
+				 <p>如果你浪费了自己的年龄，那是挺可悲的。因为你的青春只能持续一点儿时间——很短的一点儿时间。 —— 王尔德</p>
+				 <span></span>
+				 <div class="icons">
+					 <a href="#"><span class="img1"> </span></a>
+					 <a href="#"><span class="img2"> </span></a>
+					 <a href="#"><span class="img3"> </span></a>
+				 </div>
+				  <a class="date" href="#">九月</a>
+				   <div class="caption2">
+						<a href=""><img src="./images/link.png" alt=""/></a>
+					</div>
+					<div class="dmnd2"></div>	
+			 </div>
+			 <div class="blog-img img-sec">
+				<img src="https://pic.downk.cc/item/5f586b9a160a154a67dec13f.jpg" alt="" class="img-responsive" />
+			 </div>		 
+		 </div>		 
+		 
+		 <div class="blog-top" id="bottom-sec">		 
+			 <div class="img-desc blog-sec" >
+				<h4>设计师:某某某</h4>
+				<span></span>
+				 <p>真的猛士，敢于直面惨淡的人生，敢于正视淋漓的鲜血。 —— 鲁迅</p>
+				 <span></span>
+				<div class="icons">
+					 <a href="#"><span class="img1"> </span></a>
+					 <a href="#"><span class="img2"> </span></a>
+					 <a href="#"><span class="img3"> </span></a>
+				 </div>
+				  <a class="date" href="#">九月</a>
+				   <div class="caption2">
+						<a href=""><img src="./images/link.png" alt=""/></a>
+					</div>
+					<div class="dmnd2"></div>	
+			 </div>
+			 <div class="blog-img img-sec">
+				<img src="https://pic.downk.cc/item/5f586b9a160a154a67dec141.jpg" alt="" class="img-responsive" />
+			 </div>		 
+		 </div>	
+		 <div class="clearfix"></div>
+			<div class="load"><a href="#" target="_blank">加载更多</a></div>
+	 </div>
+</div>
+
+<div class="client" id="clients">
+		 <h3>经验</h3>
+		 <small></small>
+		 <script>
+		
+		$(function () {
+		 
+		  $("#slider1").responsiveSlides({
+			 auto: true,
+			 nav: true,
+			 speed: 500,
+			 namespace: "callbacks",
+		  });
+		});
+	  </script>
+	  <div class="container2">
+			<div class="slider">
+				<ul class="rslides" id="slider1">
+				 <li>
+				 <div class="person1"></div>
+				 <div class="about-add-grid">
+				 <p>工作经验：2019-至今</p>
+				 <p>大学学院</p>
+				 <a href="#"><b>职位：平面设计</b></a>		 
+				 </div>
+				 <div class="clearfix"></div>
+			  </li>	
+			  <li>
+				 <div class="person2"></div>
+				 <div class="about-add-grid">
+				 <p>工作经验：2019-至今</p>
+				 <p>大学学院</p>
+				 <a href="#"><b>职位：平面设计</b></a>		 
+				 </div>
+				 <div class="clearfix"></div>
+			  </li>	
+			 </ul>		
+			</div>
+	  </div>
+</div>
+
+
+<div class="contact text-center" id="contact">
+	<h3>留言</h3>
+	<i class="line"></i>
+	<p>低调奢华有内涵</p>
+	<form>
+	<input type="text" placeholder="姓名" required/>
+	<input type="text" placeholder="邮箱" required/>
+	<textarea placeholder="留言"></textarea>
+	<input type="submit" value="提交"/>
+	</form>
+</div>
+<!---->
+
+
+<!---->
+</section>	
+<!---->
+</body>
 </html>
