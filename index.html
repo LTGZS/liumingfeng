@@ -57,7 +57,10 @@ $(function() {
 	
 });
 </script>
-
+<!-- m3u8播放引入 -->
+<link href="https://cdn.bootcss.com/video.js/7.6.5/alt/video-js-cdn.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/video.js/6.6.2/video.js"></script>
+<script src="https://cdn.bootcss.com/videojs-contrib-hls/5.15.0/videojs-contrib-hls.min.js"></script>
 
 <link href='http://fonts.googleapis.com/css?family=Lato:100,300italic,400,700,900,300italic,700italic,900italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,900,800,700,600,500,300,100' rel='stylesheet' type='text/css'>
@@ -140,10 +143,10 @@ $(function() {
 			 </div>
 			 <div class="clearfix"></div>
 		 </div>	
-		<video width="100%" height="" controls="controls">
-			<source src="http://eu.sycdn.kuwo.cn/cff82ad2c388de99f901875805502156/5f5874f6/resource/m2/94/60/2758705401.mp4" type="video/mp4"></source>
-			
-		</video>
+		
+		 <video id="myVideo" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="1000px" height="" data-setup='{}' style="display: inline-block;">    
+		        <source id="source" src="https://iqiyi.cdn25-okzy.com/20200819/13977_50b5d388/index.m3u8?sign=e5f4ad8cbe1f1d9f7d1bcc263e301598"  type="application/x-mpegURL">
+		    </video>
 	 </div>
 	  
 </div>	
@@ -305,4 +308,15 @@ $(function() {
 </section>	
 <!---->
 </body>
+<script>    
+    // videojs 简单使用  
+    var myVideo = videojs('myVideo',{
+        bigPlayButton : true, 
+        textTrackDisplay : false, 
+        posterImage: false,
+        errorDisplay : false,
+    })
+    myVideo.play() // 视频播放
+    myVideo.pause() // 视频暂停
+</script>
 </html>
